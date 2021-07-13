@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- register24:03-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="static/admin/img/favicon.ico">
+    <title>Primary Health Center</title>
+    <link rel="stylesheet" type="text/css" href="static/admin/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/admin/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/admin/css/style.css">
+    <!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="main-wrapper  account-wrapper">
+        <div class="account-page">
+            <div class="account-center">
+                <div class="account-box">
+                    <form action="{{ url_for('pregister') }}" method="POST">
+						<div class="account-logo">
+                            <img src="static/admin/img/logo-dark.png" alt="">
+                            <p><b>Patient Registration</b></p>
+                        </div>
+                        <div class="card-box">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">Name</label>
+                                    <input type="text" name="name"  class="form-control floating" required value={{request.form.name}}>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">Email</label>
+                                    <input type="text" name="email"  class="form-control floating" required value={{request.form.email}}>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">Gender</label>
+                                    <select class="form-control" name="gender" required  value={{request.form.gender}}>
+                                            <option></option>
+                                            <option value="male">Male</option> 
+                                            <option value="female">Female</option> 
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">Date of Birth</label>
+                                    <input type="date" class="form-control floating" name="dob" required value={{request.form.dob}}>
+                                </div>
+                            </div>
+                        </div>
+                        
+                         <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">Phone</label>
+                                    <input type="text" class="form-control floating" name="phone" required value={{request.form.phone}}>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">Password</label>
+                                    <input type="password" name="password" class="form-control floating" required value={{request.form.password}}>
+                                </div>
+                            </div>
+                        </div>
+                            <div>
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">Address</label>
+                                    <input type="text" class="form-control floating" name="address" required value={{request.form.address}}>
+                                </div>
+                            </div>
+                        <div class="form-group text-center">
+                            <button class="btn btn-primary account-btn" type="submit">Register</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/admin/js/jquery-3.2.1.min.js"></script>
+	<script src="static/admin/js/popper.min.js"></script>
+    <script src="static/admin/js/bootstrap.min.js"></script>
+    <script src="static/admin/js/app.js"></script>
+</body>
+
+
+<!-- register24:03-->
+</html>
